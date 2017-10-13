@@ -21,27 +21,6 @@
 		    <script src="js/bootstrap.min.js"></script>
 		    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
 
-    <script>
-     $(document).ready(function(){
-         $('#submitButton').on('click', function(){
-             alert("submitButton works with short JS");
-
-             $.ajax({
-                 url:"https://api.textit.in/api/v2/flow_starts.json",
-                 type: 'POST',
-                 data: { flow:"c8ae1ecb-993f-4d74-b575-fbf249f4d952",
-                         tel: "18043382663"
-                 },
-                 contentType: 'application/json',
-                 headers: {
-                     "Authorization": "Token" + "33ef96da6873c297b90d80e96804b6f2386cbae1"
-                 },
-                 async: false
-             });
-
-         });
-     });
-    </script>
         <!-- Facebook Pixel Code -->
         <script>
          !function(f,b,e,v,n,t,s)
@@ -115,7 +94,14 @@
                         Send Sparket an image of your device. Our algorithm sends you an offer in seconds. We send a driver to pick up your device and give you cash. All in 20 minutes or less.
 			              </div>
 			              <div class="top70">
-				                <a href="https://getsparket.typeform.com/to/aKjRpp" class="btn red size60 width170 right40">Try Now</a>
+
+                        <form action="http://libby.io/getsparket" method="post" class="max_width770 margin_auto top60">
+                            <div class="btn red">
+                                Enter your phone number with dashes:
+                                <input class="btn red" type="text" placeholder="415-906-4777" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="query" title="We're sorry that you have to explicitly type your phone number like so: 555-555-5555" />
+                                <input type="submit" class="btn red" value="submit" />
+                            </div>
+                </form>
 			              </div>
 		            </div>
 	          </div>
